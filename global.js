@@ -8,7 +8,7 @@
 // console.log(__filename);
 
 // console.log(process);
-// console.log(process.env);
+// console.log(process.env); 
 // console.log(process.argv);
 // console.log(`Hello, ${process.argv[2]}`);
 
