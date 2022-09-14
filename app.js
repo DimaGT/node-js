@@ -4,6 +4,7 @@ const zlib = require('zlib');
 const readStream = fs.createReadStream('./docs/text.txt');
 const writeStream = fs.createWriteStream('./docs/new-text.txt');
 const compressStream = zlib.createGzip();
+const uncompressStream = zlib.createUnzip();
 
 // readStream.on('data', (chunk) => {
 //   console.log('---------');
@@ -14,13 +15,14 @@ const compressStream = zlib.createGzip();
 // });
 
 const handleError = () => {
-  console.log('Error');
-  readStream.destroy();
-  writeStream.end('Finished with error...');
+    console.log('Error');
+    readStream.destroy();
+    writeStream.end('Finished with error...');
 };
 
 readStream
-  .on('error', handleError)
-  .pipe(compressStream)
-  .pipe(writeStream)
-  .on('error', handleError);
+    .on('error', handleError)
+    .pipe(compressStream)
+    .pipe(uncompressStream)
+    .pipe(writeStream)
+    .on('error', handleError);
