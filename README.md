@@ -1,2 +1,2 @@
 Node js Posts
-<img src="img.png"/>
+<img src="./image.png"/>
