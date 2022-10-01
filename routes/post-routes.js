@@ -1,12 +1,12 @@
 const express = require('express');
 const {
-  getPost, 
-  deletePost,
-  getEditPost,
-  editPost,
-  getPosts,
-  getAddPost,
-  addPost
+    getPost,
+    deletePost,
+    getEditPost,
+    editPost,
+    getPosts,
+    getAddPost,
+    addPost,
 } = require('../controllers/post-controller');
 
 const router = express.Router();

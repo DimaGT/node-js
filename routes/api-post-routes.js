@@ -1,10 +1,10 @@
 const express = require('express');
 const {
-  getPosts,
-  addPost,
-  getPost, 
-  deletePost,
-  editPost,
+    getPosts,
+    addPost,
+    getPost,
+    deletePost,
+    editPost,
 } = require('../controllers/api-post-controller');
 
 const router = express.Router();
